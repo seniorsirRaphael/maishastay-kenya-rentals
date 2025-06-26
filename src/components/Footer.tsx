@@ -6,6 +6,14 @@ const Footer = () => {
     window.open('https://seniorsirraphael.github.io/portfolio', '_blank');
   };
 
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/254757319350', '_blank');
+  };
+
+  const handleEmailClick = () => {
+    window.open('mailto:siraphaelmwendwa@gmail.com', '_blank');
+  };
+
   return (
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -43,27 +51,33 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-2 text-gray-300">
+              <button 
+                onClick={handleWhatsAppClick}
+                className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors cursor-pointer"
+              >
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">+254 757 319 350</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300">
+              </button>
+              <button 
+                onClick={handleEmailClick}
+                className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors cursor-pointer"
+              >
                 <Mail className="h-4 w-4" />
                 <span className="text-sm">siraphaelmwendwa@gmail.com</span>
-              </div>
+              </button>
             </div>
             
             <div className="flex space-x-3 mt-4">
               <a href="https://seniorsirraphael.github.io/portfolio" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com/Raphaelmwe80915" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+              <a href="https://twitter.com/Raphaelmwe80915" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://instagram.com/seniorsirraphael" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+              <a href="https://instagram.com/seniorsirraphael" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-400 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com/in/seniorsirraphael" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+              <a href="https://linkedin.com/in/seniorsirraphael" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>

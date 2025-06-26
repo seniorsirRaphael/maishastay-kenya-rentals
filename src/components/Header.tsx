@@ -2,13 +2,21 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X, Home, Phone, Mail } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogoClick = () => {
     window.open('https://seniorsirraphael.github.io/portfolio', '_blank');
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/254757319350', '_blank');
+  };
+
+  const handleEmailClick = () => {
+    window.open('mailto:siraphaelmwendwa@gmail.com', '_blank');
   };
 
   return (
@@ -32,6 +40,25 @@ const Header = () => {
             <Link to="/about" className="text-gray-700 hover:text-orange-600 transition-colors">About</Link>
             <Link to="/contact" className="text-gray-700 hover:text-orange-600 transition-colors">Contact</Link>
             <Link to="/blog" className="text-gray-700 hover:text-orange-600 transition-colors">Blog</Link>
+            
+            {/* Contact Info */}
+            <div className="flex items-center space-x-3">
+              <button 
+                onClick={handleWhatsAppClick}
+                className="flex items-center text-green-600 hover:text-green-700 transition-colors"
+                title="WhatsApp Us"
+              >
+                <Phone className="h-4 w-4 mr-1" />
+                <span className="text-sm">+254 757 319 350</span>
+              </button>
+              <button 
+                onClick={handleEmailClick}
+                className="flex items-center text-orange-600 hover:text-orange-700 transition-colors"
+                title="Email Us"
+              >
+                <Mail className="h-4 w-4" />
+              </button>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -53,6 +80,24 @@ const Header = () => {
               <Link to="/about" className="block py-2 text-gray-700 hover:text-orange-600 transition-colors">About</Link>
               <Link to="/contact" className="block py-2 text-gray-700 hover:text-orange-600 transition-colors">Contact</Link>
               <Link to="/blog" className="block py-2 text-gray-700 hover:text-orange-600 transition-colors">Blog</Link>
+              
+              {/* Mobile Contact Info */}
+              <div className="pt-4 border-t space-y-2">
+                <button 
+                  onClick={handleWhatsAppClick}
+                  className="flex items-center text-green-600 hover:text-green-700 transition-colors"
+                >
+                  <Phone className="h-4 w-4 mr-2" />
+                  <span>+254 757 319 350</span>
+                </button>
+                <button 
+                  onClick={handleEmailClick}
+                  className="flex items-center text-orange-600 hover:text-orange-700 transition-colors"
+                >
+                  <Mail className="h-4 w-4 mr-2" />
+                  <span>Email Us</span>
+                </button>
+              </div>
             </div>
           </nav>
         )}

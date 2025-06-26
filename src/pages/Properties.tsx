@@ -9,58 +9,62 @@ import SearchForm from "@/components/SearchForm";
 const allProperties = [
   {
     id: "1",
-    title: "Modern Bedsitter in Kileleshwa",
+    title: "Modern 1BR in Kileleshwa",
     location: "Kileleshwa, Nairobi",
     price: 25000,
-    type: "Bedsitter",
-    bedrooms: 1,
-    bathrooms: 1,
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=600&q=80",
-    description: "Fully furnished bedsitter with modern amenities, close to shopping centers and public transport."
-  },
-  {
-    id: "2",
-    title: "Spacious 2BR Apartment",
-    location: "Westlands, Nairobi",
-    price: 65000,
-    type: "2 Bedroom",
-    bedrooms: 2,
-    bathrooms: 2,
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80",
-    description: "Beautiful 2-bedroom apartment with parking, gym access, and 24/7 security in prime location."
-  },
-  {
-    id: "3",
-    title: "Cozy Studio in Town",
-    location: "CBD, Mombasa",
-    price: 18000,
-    type: "Studio",
-    bedrooms: 1,
-    bathrooms: 1,
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80",
-    description: "Perfect studio apartment for young professionals, walking distance to offices and restaurants."
-  },
-  {
-    id: "4",
-    title: "Family Villa with Garden",
-    location: "Karen, Nairobi",
-    price: 120000,
-    type: "Villa",
-    bedrooms: 4,
-    bathrooms: 3,
-    image: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?auto=format&fit=crop&w=600&q=80",
-    description: "Luxurious 4-bedroom villa with large garden, perfect for families seeking space and tranquility."
-  },
-  {
-    id: "5",
-    title: "Affordable 1BR in Nakuru",
-    location: "Nakuru Town",
-    price: 15000,
     type: "1 Bedroom",
     bedrooms: 1,
     bathrooms: 1,
-    image: "https://images.unsplash.com/photo-1493962853295-0fd70327578a?auto=format&fit=crop&w=600&q=80",
-    description: "Clean and affordable 1-bedroom apartment with water and electricity included, great neighborhood."
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&q=80",
+    description: "Fully furnished apartment with modern amenities, close to shopping centers and public transport.",
+    featured: true
+  },
+  {
+    id: "2",
+    title: "Spacious 2BR Villa in Karen",
+    location: "Karen, Nairobi",
+    price: 65000,
+    type: "Villa",
+    bedrooms: 2,
+    bathrooms: 2,
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=600&q=80",
+    description: "Beautiful villa with garden, parking, and 24/7 security in prime Karen location.",
+    featured: true
+  },
+  {
+    id: "3",
+    title: "Affordable Bedsitter in CBD",
+    location: "CBD, Mombasa",
+    price: 18000,
+    type: "Bedsitter",
+    bedrooms: 1,
+    bathrooms: 1,
+    image: "https://images.unsplash.com/photo-1487252665478-49b61b47f302?auto=format&fit=crop&w=600&q=80",
+    description: "Perfect for young professionals, walking distance to offices and restaurants.",
+    verified: true
+  },
+  {
+    id: "4",
+    title: "Family Home in Westlands",
+    location: "Westlands, Nairobi",
+    price: 85000,
+    type: "3 Bedroom",
+    bedrooms: 3,
+    bathrooms: 2,
+    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=600&q=80",
+    description: "Spacious family home with modern kitchen, ideal for families seeking comfort.",
+    featured: true
+  },
+  {
+    id: "5",
+    title: "Student Flat in Nakuru",
+    location: "Nakuru Town",
+    price: 15000,
+    type: "Studio",
+    bedrooms: 1,
+    bathrooms: 1,
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&q=80",
+    description: "Clean and affordable studio with water and electricity included, great for students."
   },
   {
     id: "6",
@@ -70,19 +74,20 @@ const allProperties = [
     type: "Bedsitter",
     bedrooms: 1,
     bathrooms: 1,
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=600&q=80",
-    description: "High-end bedsitter with modern kitchen, fast internet, and backup generator."
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=600&q=80",
+    description: "High-end bedsitter with modern kitchen, fast internet, and backup generator.",
+    verified: true
   },
   {
     id: "7",
-    title: "Student Friendly Studio",
+    title: "Mabati Rental in Rongai",
     location: "Rongai, Nairobi",
     price: 12000,
     type: "Studio",
     bedrooms: 1,
     bathrooms: 1,
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80",
-    description: "Perfect for students, affordable rent with reliable water and electricity supply."
+    image: "https://images.unsplash.com/photo-1487252665478-49b61b47f302?auto=format&fit=crop&w=600&q=80",
+    description: "Affordable mabati house perfect for students, reliable water and electricity supply."
   },
   {
     id: "8",
@@ -92,8 +97,9 @@ const allProperties = [
     type: "2 Bedroom",
     bedrooms: 2,
     bathrooms: 2,
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80",
-    description: "Ocean view apartment with swimming pool, perfect for those who love the coast."
+    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=600&q=80",
+    description: "Ocean view apartment with swimming pool, perfect for those who love the coast.",
+    verified: true
   }
 ];
 

@@ -14,6 +14,8 @@ interface PropertyCardProps {
   bathrooms?: number;
   image: string;
   description: string;
+  featured?: boolean;
+  verified?: boolean;
 }
 
 const PropertyCard = ({ 
@@ -24,7 +26,9 @@ const PropertyCard = ({
   bedrooms, 
   bathrooms, 
   image, 
-  description 
+  description,
+  featured,
+  verified
 }: PropertyCardProps) => {
   const handleWhatsAppContact = () => {
     const message = `Hi! I'm interested in the ${title} property in ${location} for Ksh ${price.toLocaleString()}/month. Can you provide more details?`;
@@ -33,16 +37,18 @@ const PropertyCard = ({
   };
 
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-300">
+    <Card className="hover:shadow-lg transition-shadow duration-300 relative">
       <div className="relative">
         <img
           src={image}
           alt={title}
           className="w-full h-48 object-cover rounded-t-lg"
         />
-        <Badge className="absolute top-3 left-3 bg-orange-600 hover:bg-orange-700">
-          {type}
-        </Badge>
+        <div className="absolute top-3 left-3 flex flex-col gap-1">
+          <Badge className="bg-orange-600 hover:bg-orange-700">
+            {type}
+          </Badge>
+        </div>
       </div>
       
       <CardContent className="p-4">
