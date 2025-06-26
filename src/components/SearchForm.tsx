@@ -13,7 +13,7 @@ const SearchForm = () => {
   const navigate = useNavigate();
 
   const locations = [
-    "Nairobi", "Mombasa", "Nakuru", "Eldoret", "Kisumu", 
+    "Nairobi", "Mombasa", "Kisumu", "Eldoret", "Nakuru", 
     "Meru", "Voi", "Maungu", "Kitale", "Thika"
   ];
 
@@ -28,11 +28,11 @@ const SearchForm = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+    <div className="bg-white p-6 rounded-lg shadow-lg max-w-5xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Select value={location} onValueChange={setLocation}>
           <SelectTrigger>
-            <SelectValue placeholder="Select Location" />
+            <SelectValue placeholder="Select City" />
           </SelectTrigger>
           <SelectContent>
             {locations.map((loc) => (
@@ -52,6 +52,7 @@ const SearchForm = () => {
             <SelectItem value="studio">Studio Apartment</SelectItem>
             <SelectItem value="1-bedroom">1 Bedroom</SelectItem>
             <SelectItem value="2-bedroom">2 Bedroom</SelectItem>
+            <SelectItem value="3-bedroom">3 Bedroom</SelectItem>
             <SelectItem value="villa">Villa</SelectItem>
           </SelectContent>
         </Select>
@@ -67,6 +68,12 @@ const SearchForm = () => {
           <Search className="h-4 w-4 mr-2" />
           Search Rentals
         </Button>
+      </div>
+      
+      <div className="mt-4 text-center">
+        <p className="text-sm text-gray-600">
+          Search across {locations.length} major Kenyan cities • 22+ verified properties
+        </p>
       </div>
     </div>
   );
