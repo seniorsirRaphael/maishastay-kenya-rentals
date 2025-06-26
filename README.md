@@ -1,3 +1,55 @@
+# 🏠 MaishaStay Kenya Rentals
+
+**MaishaStay** is a clean, mobile-friendly rental listings platform built specifically for the Kenyan market. It allows users to find affordable rentals — bedsitters, apartments, villas, and studios — in towns like Nairobi, Mombasa, Voi, Maungu, and more.
+
+---
+
+## 🌍 Live Preview
+🔗 [MaishaStay Preview (Lovable.dev)](https://preview--maishastay-kenya-rentals.lovable.app/)
+
+---
+
+## 📌 Key Features
+
+- ✅ Search verified rental properties across Kenya
+- ✅ View fictional listings with rent in Ksh (KES)
+- ✅ Landlord and caretaker contacts listed per property
+- ✅ Mobile-optimized, clean UI
+- ✅ Founder bio and trust-building section
+- ✅ Blog with renting tips
+- ✅ Contact section with WhatsApp, email, social links
+
+---
+
+## 🔧 Tech Stack
+
+- HTML/CSS (generated using AI from [Lovable.dev](https://lovable.dev))
+- GitHub for version control & potential hosting
+- Content customized for Kenyan market
+
+---
+
+## 👨‍💼 About the Founder
+
+**SeniorSirRaphael** (Mwendwa Raphael) is a passionate web developer and Applied Computer Science student at Egerton University. He created MaishaStay to make it easier for Kenyans to find affordable, safe, and trustworthy rentals through digital means.
+
+---
+
+## 📞 Contact
+
+- 📱 WhatsApp: [+254 757 319 350](https://wa.me/254757319350)
+- 📧 Email: siraphaelmwendwa@gmail.com
+- 🌐 GitHub Portfolio: [https://seniorsirraphael.github.io/portfolio](https://seniorsirraphael.github.io/portfolio)
+- 🐦 Twitter: [@Raphaelmwe80915](https://twitter.com/Raphaelmwe80915)
+
+---
+
+## 💡 Want to Use or Support It?
+
+Feel free to fork, star ⭐, or reach out for partnerships or collaborations.
+
+
+
 # Welcome to your Lovable project
 
 ## Project info
